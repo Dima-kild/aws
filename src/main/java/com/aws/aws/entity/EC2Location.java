@@ -7,4 +7,5 @@ public class EC2Location {
 
     private String region;
     private String availabilityZone;
+    private String userData;
 }
