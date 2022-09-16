@@ -29,8 +29,8 @@ jobs:
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
         with:
           arguments: build
-#            - fullName=`find build/libs/*.jar`
-#            - fileName=`basename $fullName .jar`
+            - fullName=`find build/libs/*.jar`
+            - fileName=`basename $fullName .jar`
 #            - mkdir packaged
 #            - cp build/libs/$fileName.jar packaged/$fileName.${env.DEPLOY_PACKAGE_NAME}.jar
 #
