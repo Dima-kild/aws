@@ -25,7 +25,7 @@ jobs:
           java-version: '11'
           distribution: 'corretto'
 
-      - name: Create ZIP deployment package
+      - name: Create JAR deployment package
         run: zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
 
       - name : Configure aws credentials
