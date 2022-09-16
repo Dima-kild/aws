@@ -25,11 +25,8 @@ jobs:
           java-version: '11'
           distribution: 'corretto'
 
-      - name: Build with Gradle
-#        uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
-#        with:
-#          arguments: build
-        run : gradle clean build -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
+      - name: Create ZIP deployment package
+        run: zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
 
       - name : Configure aws credentials
         uses : aws-actions/configure-aws-credentials@v1
