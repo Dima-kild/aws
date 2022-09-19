@@ -13,7 +13,6 @@ public class AwsServiceImpl implements AwsService {
         var ec2Location = new EC2Location();
         ec2Location.setAvailabilityZone(getAvailabilityZone());
         ec2Location.setRegion(getEC2InstanceRegion());
-        ec2Location.setUserData(getUserData());
         ec2Location.setAmiId(getAmiId());
 
         return ec2Location;
